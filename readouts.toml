@@ -1,0 +1,15 @@
+# The readouts of the Z7 analysis (SNOLAB). Read by goldpan.registry (`registry = ["../goldreg-Z7"]` in a dataset definition file,
+# or the environment variable GOLDPAN_REGISTRY). Not part of the library.
+format_version = 1
+
+[readouts.Z7]
+pretrigger_samples = 6250
+glitch_samples = 10
+sample_period_s = 1.6e-6
+status = "inferred"
+description = "The Z7 readout (SNOLAB): a 6250-sample pretrigger window (10 ms), 1.6 us per sample (625 kHz)."
+evidence = """Taken from the Z7 analysis of the collaboration's scdms-analysis-tools (a fixed 10 ms pretrigger window at 1.6 us per \
+sample). NOT checked against a file: the begin-of-run ODB of series 24260424_145101 (Det07) gives a pre-trigger offset of 16383 \
+samples (26.2 ms) and an on-pulse length of 32768 samples (52.4 ms), which is a different number; they may be different \
+configurations. Confirm before using this entry for that series (issue 150). Copied on 2026-11-06 from goldreg-R76 at commit \
+3b562a2 (readouts.toml), where it was the one record of another analysis."""
